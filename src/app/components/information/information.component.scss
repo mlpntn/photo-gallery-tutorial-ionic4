@@ -1,0 +1,301 @@
+.information {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: auto;
+  font-family: "Alice", serif;
+  display: flex;
+
+  box-shadow: 0px 0px #00000070;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    overflow: visible;
+    border-color: inherit;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../../../assets/images/maps.webp);
+    background-clip: padding-box;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    flex-wrap: nowrap;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  width: 100%;  
+}
+
+.header-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header-section h2 {
+  font-size: 3.5rem;
+  margin-top: -1.2rem;
+  font-family: 'Dancing-Script';
+  color:#b4c7e7;
+  @media screen and (max-width: 768px) {
+    font-size: 2.1rem;
+  }
+
+}
+
+.heading-text {
+  margin: 0 24%;
+  font-family: 'Myriad Pro';
+  letter-spacing: .05rem;
+  font-size: 15px;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.inner-section {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  align-items: center;
+  padding: 1em;
+  border: 1px solid #b4c7e7;
+  padding: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.ceremony, .reception {
+  width: 25%;
+
+  @media screen and (max-width: 1600px) {
+    width: 30%; 
+  }
+
+  @media screen and (max-width: 1300px) {
+        width: 35%;
+  }  
+  @media screen and (max-width: 1000px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 800px) {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+.w-icon {
+  fill: #F3F6F6;
+  color: #F3F6F6;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ceremony {
+  background-color: #b4c7e7;
+  color: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ceremony .heading {
+  color: white;
+}
+
+.reception {
+  background-color: #F3F6F6;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inner-section h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 1.5rem;
+  }
+}
+
+.text-widget span {
+  font-size: .85rem;  
+  line-height: 1.6rem;
+  font-family: 'Myriad Pro';
+  
+  letter-spacing: .03rem;
+}
+
+.qr {
+  width: 150px;
+  border-radius: 7%;
+  margin-top: 1em;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.attire {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5%;
+}
+
+.attire .heading-text {
+  margin: auto;
+  font-family: 'Myriad Pro';
+  letter-spacing: .05rem;
+  font-size: 15px;
+}
+
+.hex-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  gap: 5px;
+  justify-content: center;
+
+  @media screen and (max-width: 590px) {
+    grid-template-columns: repeat(4, 60px);
+  }
+}
+
+.hex {
+  width: 60px;
+  height: 34.64px;
+  background-color: var(--hex-color);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex:nth-child(1) { --hex-color: #fbe5d7; }
+.hex:nth-child(2) { --hex-color: #ebbaab; }
+.hex:nth-child(3) { --hex-color: #d9d9d9; }
+.hex:nth-child(4) { --hex-color: #adb8ca; }
+.hex:nth-child(5) { --hex-color: #bdd7ee; }
+.hex:nth-child(6) { --hex-color: #b4c7e7; }
+.hex:nth-child(7) { --hex-color: #8fabdd; }
+
+h4 {
+  text-align: center;
+}
+
+p {
+  font-family: 'Myriad Pro';
+  font-size: .85rem;
+  letter-spacing: .02rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  @media screen and (max-width: 691px) {
+    font-size: 17px;
+  }
+}
+
+.inner-container {
+  width: 40%;
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding: 3em;
+  margin-bottom: 1em;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 1600px) {
+    width: 50%; 
+  }
+
+  @media screen and (max-width: 1300px) {
+    width: 60%;
+  }  
+  @media screen and (max-width: 1000px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 800px) {
+    width: 80%;
+    padding: 3em 2em;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  } 
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .item {
+    margin-top: 30px;
+    position: relative; /* Ensure positioning context for pseudo-element */
+    text-align: center;
+  }
+  
+  .item:not(:last-child)::before {
+    content: "";
+      position: absolute;
+      top: 113%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 50%;
+      background-color: #b4c7e7;
+  }
+  
+  .desc-left {
+    margin-left: -12em;
+    margin-top: -3.5em;
+  }
+  
+  .desc-right {
+    margin-right: -12em;
+    margin-top: -3.5em;
+  }
+  
+  .time {
+    font-size: 16px;
+    color: #b4c7e7;
+    font-family: "Myriad Pro";
+    margin-top: 10px;
+    letter-spacing: 0.1rem;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: gray;
+    font-family: 'Myriad Pro';
+    letter-spacing: 0.07rem;
+    margin-top: 5px;
+  }
+  
+  .icon {
+    width: 50px;
+    margin-top: 10px;
+  }
+}

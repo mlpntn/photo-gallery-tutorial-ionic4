@@ -1,0 +1,212 @@
+.about-us {
+  width: 100%;
+  margin: 0 auto;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  height: auto;
+  font-family: "Alice", serif;
+  box-shadow: 0px 0px #00000070;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden; /* Updated to hide overflow */
+  border-color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../../assets/images/about-bg.webp');
+  background-clip: padding-box;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  flex-wrap: nowrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  position: relative;
+}
+
+.about-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.header-section {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-section .heading-widget h2 {
+  font-size: 3.5rem;
+  margin-top: -1.2rem;
+  font-family: 'Dancing-Script';
+  color: #b4c7e7;
+}
+
+.heading-text-widget {
+  font-family: 'Myriad Pro';
+  letter-spacing: .05rem;
+  font-size: .85rem;
+  width:50%;
+  margin: auto;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow sections to wrap to next line on smaller screens */
+  justify-content: center;
+  padding: 1em;
+}
+
+.inner-section {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  position: relative;
+  z-index: 2;
+}
+
+.image {
+  width: 20%;
+  justify-content: center;
+}
+
+.left,
+.right {
+  display: flex;
+  margin: 0;
+}
+
+.left .heading-widget,
+.right .heading-widget {
+  font-family: 'Dancing-Script';
+  color: #b4c7e7;
+}
+
+.left p,
+.right p {
+  font-family: 'Myriad Pro';
+  font-weight: 300;
+  letter-spacing: .05rem;
+}
+
+.left {
+  padding-right: 80px;
+}
+
+.right {
+  justify-content: flex-end;
+  padding-left: 80px;
+  letter-spacing: .05rem;
+}
+
+.image-widget img {
+  height: auto;
+  border-radius: 50%;
+}
+
+.heading-widget h2,
+.heading-widget h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.text-widget p {
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+.elementor-2 .elementor-element.elementor-element-f3995b4 {
+  position: relative;
+  z-index: 1;
+}
+
+.elementor-2 .elementor-element.elementor-element-f3995b4::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  width: 85%;
+  height: 85%;
+  z-index: -1;
+  background: url(https://websitedemos.net/wedding-02/wp-content/uploads/sites/48/2020/06/ampersand-bg.svg), url(../../../assets/images/bouquet-img.webp) center/cover no-repeat;
+  opacity: 0.5;
+}
+
+.inner-section .image-widget {
+  position: relative;
+  z-index: 3;
+  padding: 15%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1100px) {
+  .image {
+    width: 30%; 
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .inner-section {
+    width: 90%;
+    text-align: center;
+  }
+  .elementor-2 {
+    width: 50% !important;
+    margin-left: 25%;
+  }
+  .left, .right {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-section {
+    margin-bottom: 0;
+  }
+  .header-section .heading-widget h2 {
+    font-size: 2.1rem;
+  }
+
+  .elementor-2 {
+    width: 70% !important;
+    margin-left: 15%;
+  }
+  .left p, .right p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image {
+    width: 85%;
+    text-align: center;
+  }
+}

@@ -10,3 +10,29 @@
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
 @import './assets/scss/typography.scss';
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+    --accent: rgb(129, 202, 218); /* Define accent color */
+    --pfont: 'Lato', sans-serif; /* Define primary font */
+    --bgcolor: white; /* Define background color */
+    --txtcolor: #333333; /* Define text color */
+  }
+  
+  :root {
+    --lightaccent: hsl(190, 54%, 83%);
+  }
+  :root {
+    --desataccent: hsl(190, 15%, 58%);
+  }
+  :root {
+    --darkaccent: hsl(190, 54%, 56%);
+  }
+  :root {
+    --accent: rgb(129,202,218);
+  }
+  

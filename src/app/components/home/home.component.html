@@ -1,0 +1,45 @@
+<div class="header" id="home">
+  <div class="content">
+    <div class="details">
+      <div class="header-text">
+        <h6>The Wedding of</h6>
+      </div>
+      <div class="name-container">
+        <h1 class="name">Alvin & Kay</h1>
+      </div>        
+      <div id="act-ro-cou">
+        <div id="countdown" class="regular" *ngIf="countdownDisplay != 'EXPIRED'">
+          <div class="count_block">
+            <div class="count_num">{{days}}</div>
+            <div class="count_label">days</div>
+          </div>
+          <div class="count_block">
+            <div class="count_num">{{hours}}</div>
+            <div class="count_label">hours</div>
+          </div>
+          <div class="count_block">
+            <div class="count_num">{{minutes}}</div>
+            <div class="count_label">mins</div>
+          </div>
+          <div class="count_block">
+            <div class="count_num">{{seconds}}</div>
+            <div class="count_label">secs</div>
+          </div>
+        </div>
+        <div class="expired" *ngIf="countdownDisplay == 'EXPIRED'">
+          <img src="../../../assets/images/infinity.png" loading="lazy" width="200" alt="Expired" />
+        </div>
+      </div>
+      <div class="date">
+        <h3>September 21, 2024</h3>
+      </div>
+      <div class="elementor-button-wrapper" *ngIf="countdownDisplay != 'EXPIRED'">
+        <button (click)="navigateSection('rsvp', false)" class="elementor-button elementor-button-link elementor-size-sm">
+          <span class="elementor-button-content-wrapper">
+            <span class="elementor-button-text">ADD TO YOUR CALENDAR</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

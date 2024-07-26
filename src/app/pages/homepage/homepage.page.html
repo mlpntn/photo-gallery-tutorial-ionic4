@@ -1,281 +1,49 @@
-<div class="container" style="overflow: auto;">
-  <div class="header">
-    <div class="content">
-      <div class="details">
-        <div class="header">
-          <h6>We Are Getting Married</h6>
+
+<header>
+    <nav id="navbar" #navbar>
+        <div class="logo"><img src="../../../assets/images/ak.webp" loading="lazy" width="50"/></div>
+        <ul class="nav-links" #navLinks>
+          <li><a (click)="navigateSection('home')">Home</a></li>
+          <li><a (click)="navigateSection('about-us')">About Us</a></li>
+          <li><a (click)="navigateSection('story')">Our Story</a></li>
+          <li><a (click)="navigateSection('information')">Wedding Details</a></li>
+          <li><a (click)="navigateSection('rsvp')">RSVP</a></li>
+        </ul>
+        <div class="burger" (click)="toggleNav()" #burger>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-        <div class="name-container">
-          <h1 class="name">Alvin & Kay</h1>
-        </div>
-        <div class="elementor-widget-container">
-          <div class="elementor-divider">
-            <span class="elementor-divider-separator">
-              <span class="elementor-divider__text elementor-divider__element">
-                Save The Date 
-              </span>
-            </span>
-          </div>
-        </div>
-        <div class="date">
-          <h3>September 21, 2024</h3>
-        </div>
-        <div class="elementor-button-wrapper">
-          <a href="#" class="elementor-button elementor-button-link elementor-size-sm">
-            <span class="elementor-button-content-wrapper">
-              <span class="elementor-button-text">ADD TO YOUR CALENDAR</span>
-            </span>           
-          </a>
-        </div>
+    </nav>
+</header>
+
+<div class="container">
+  <app-home></app-home>
+
+  <div class="content-section">
+    <app-about-us id="about-us"></app-about-us>
+    <div class="blockquote-wrapper quote">
+      <div class="blockquote">
+        <h1>
+          If you keep giving up on people so quickly, you’re gonna miss out on something great.
+         </h1>
+        <h4>&mdash;Robin Scherbatsky</h4>
       </div>
     </div>
-    
+    <app-story id="story"></app-story>
   </div>
-  <div class="about-us">
-    <div class="container">
-      <div class="header-section">
-        <div class="image-widget">
-          <img src="https://websitedemos.net/wedding-02/wp-content/uploads/sites/48/2020/06/flower-icon-01.png" style="width:40px" alt="">
-        </div>
-        <div class="heading-widget">
-          <h2>Groom and Bride</h2>  
-        </div>
-        <div class="text-widget heading-text-widget">
-          <p>
-            As we embark on this beautiful journey of love and togetherness, allow us to introduce ourselves - the stars of this romantic tale.
-          </p>
-        </div>
-      </div>
-      <div class="section">
-        <div class="inner-section left">
-          <div class="heading-widget">
-            <h3>Kay Niango</h3>
-          </div>
-          <div class="text-widget">
-            <p>
-              A vision of elegance and grace, Kay brings warmth and kindness wherever she goes. With her radiant smile and compassionate heart, she lights up the room and fills it with laughter and joy. Her love for Alvin knows no bounds, and together, they create a love story that is nothing short of magical
-            </p>
-          </div>
-        </div>
-        <div class="inner-section">
-          <div class="elementor-2">
-            <div class="elementor-element elementor-element-f3995b4">
-                <div class="e-con-inner">
-                      <div class="image-widget">
-                        <img src="../../../assets/images/profile-couple.png" alt="">
-                      </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="inner-section right">
-          <div class="heading-widget">
-            <h3>Alvin Malapo</h3>
-          </div>
-          <div class="text-widget">
-            <p>
-              Strong, dependable, and endlessly charming, Alvin is the epitome of a true gentleman. With his unwavering devotion and unwavering support, he stands by Kay's side, ready to conquer life's adventures together. His love for Alvin is pure and unyielding, a testament to the bond they share
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>  
-  </div>
+  <!-- <app-memories></app-memories> -->
 
-  <div class="captured-moments">
-    <div class="container">
-      <div class="header-section"> 
-        <div class="image-widget">
-          <img src="../../../assets/images/photo-camera.png" style="width:40px" alt="">
-        </div>
-        <div class="heading-widget">
-          <h2>Captured Memories</h2>  
-        </div>
-        <div class="text-widget heading-text-widget">
-          <p>
-            Browse through these timeless treasures and embark on a journey down memory lane. Let the laughter, the tears, and the love captured in these images transport you back to that unforgettable day when two souls became one.
-          </p>
-        </div>
-      </div>
-      <div class="section">
-          <div class="img-content">
-            <h2>Sweet...</h2>
-            <img src="../../../assets/images/first.jpg" alt="">
-          </div>
-          <div class="img-content">
-            <img src="../../../assets/images/second.jpg" alt="">
-            <img src="../../../assets/images/third.jpg" alt="">
-            <img src="../../../assets/images/fourth.jpg" alt="">
-          </div>
-          <div class="img-content">
-            <img src="../../../assets/images/sixth.jpg" alt="">
-            <h2>Memories...</h2>
-          </div>   
-      </div>
-    </div>
-    
+  <div class="content-section">
+    <app-information id="information"></app-information>
+    <!-- <div class="playlist-container">
+      <div class="playlist">
+        <iframe style="border-radius:7px" src="https://open.spotify.com/embed/playlist/5Hc3sPwHcNf2bPSRbGmXKW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>   
+    </div> -->
+    <!-- <section id="rsvp"><app-rsvp></app-rsvp></section> -->
   </div>
-
-  <div class="story">
-    <div class="container">
-      <div class="header-section">
-        <div class="image-widget">
-          <img src="https://websitedemos.net/wedding-02/wp-content/uploads/sites/48/2020/06/flower-icon-01.png" style="width:40px" alt="">
-        </div>
-        <div class="heading-widget">
-          <h2>Our Story</h2>  
-        </div>
-        <div class="text-widget heading-text-widget">
-          <p>
-            Discover the journey of love that brought us together. From the first encounter to this moment, explore the chapters of our story, filled with laughter, love, and unforgettable memories
-          </p>
-        </div>
-      </div>
-      <div class="section">
-        <div class="inner-section">
-          <div class="date-widget">
-            <h3>2016</h3>
-          </div>
-          <div class="heading-widget">
-            <h3>We Met</h3>
-          </div>
-          <div class="text-widget">
-            <p>
-              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta.
-            </p>
-          </div>
-        </div>
-        <div class="inner-section">
-          <div class="date-widget">
-            <h3>January 30, 2021</h3>
-          </div>
-          <div class="heading-widget">
-            <h3>We Became Official</h3>
-          </div>
-          <div class="text-widget">
-            <p>
-              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta.
-            </p>
-          </div>
-        </div>
-        <div class="inner-section">
-          <div class="date-widget">
-            <h3>July 8, 2023</h3>
-          </div>
-          <div class="heading-widget">
-            <h3>He Proposed</h3>
-          </div>
-          <div class="text-widget">
-            <p>
-              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>  
-  </div>
-  <div class="rsvp">
-    <div class="container">
-      <div class="header-section"> 
-        <div class="image-widget">
-          <img src="../../../assets/images/rsvp.png" style="width:40px" alt="">
-        </div>
-        <div class="heading-widget">
-          <h2>Are You Attending?</h2>  
-        </div>
-        <div class="text-widget heading-text-widget">
-          <p>
-            Ready to share in our joy? Confirm your presence and be part of our special day. Your attendance will make our celebration complete as we embark on this new chapter together.
-          </p>
-        </div>
-      </div>
-      <div class="section">
-        <div class="form-section">
-          <form action="#">
-            <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Full Name" required>
-            </div>
-            <div class="form-group">
-              <label>Will you be attending?</label>
-              <label><input type="radio" name="attending" value="yes" required> Yes</label>
-              <label><input type="radio" name="attending" value="no" required> No</label>
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" placeholder="Message" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="number" id="guests" placeholder="No. of Guests" name="guests" min="0" required>
-            </div>
-            <div class="button-group">
-              <button type="submit">Submit</button>
-            </div>           
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div class="information">
-    <div class="container">
-      <div class="header-section">
-        <div class="image-widget">
-          <img src="https://websitedemos.net/wedding-02/wp-content/uploads/sites/48/2020/06/flower-icon-01.png" style="width:40px" alt="">
-        </div>
-        <div class="heading-widget">
-          <h2>When & Where</h2>  
-        </div>
-        <div class="text-widget heading-text-widget">
-          <p>
-            We love to see you soon.
-          </p>
-        </div>
-      </div>
-      <div class="section">
-        <div class="inner-section ceremony" (click)="changeMaps()">
-          <div class="image-widget church">
-            <img src="../../../assets/images/church.png" style="width:40px" alt="">
-          </div>
-          <div class="heading-widget">
-            <h3>The Ceremony</h3>
-          </div>
-          <div class="text-widget">
-            <span>Saturday, September 21, 2024</span>
-          </div>
-          <div class="text-widget">
-            <span>2:00 PM - 3:00 PM</span>
-          </div>
-          <div class="text-widget">
-            <span>San Antonio de Padua Parish</span>
-          </div>
-          <div class="text-widget">
-            <span>Brgy. Pooc II, Silang, Cavite</span>
-          </div>
-        </div>
-        <div class="inner-section reception" (click)="changeMaps()">
-          <div class="image-widget church">
-            <img src="../../../assets/images/reception.png" style="width:40px" alt="">
-          </div>
-          <div class="heading-widget">
-            <h3>The Reception</h3>
-          </div>
-          <div class="text-widget">
-            <span>Saturday, September 21, 2024</span>         
-          </div>
-          <div class="text-widget">
-            <span>4:00 PM - 8:00 PM</span>
-          </div>
-          <div class="text-widget">
-            <span>Fruella's Events Place Tagaytay</span>
-          </div>
-          <div class="text-widget">
-            <span>144 Daang Luma, Brgy. Salaban, Amadeo, Cavite</span>
-          </div>
-        </div>
-      </div>
-      <div class="maps">
-        <iframe *ngIf="isChurch" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.066113784004!2d120.99124497722104!3d14.190905979062283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7c0265859361%3A0xa4a9b11e95646896!2sSan%20Antonio%20de%20Padua%20Parish!5e0!3m2!1sen!2sph!4v1715274053401!5m2!1sen!2sph" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe *ngIf="!isChurch" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.056021182774!2d120.92893307456491!3d14.132803088359514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd796d1fd7f119%3A0x5fccd52277bc6f1!2sFruella&#39;s%20Events%20Venue%20Tagaytay!5e0!3m2!1sen!2sph!4v1715274335697!5m2!1sen!2sph" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>  
-  </div>
-</div>
+  <footer class="footer">   
+        <p>&copy; 2024 Alvin & Kay. All rights reserved.</p>
+  </footer>
+</div>  
